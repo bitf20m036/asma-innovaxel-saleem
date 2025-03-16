@@ -18,13 +18,13 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 
 ## 🔧 Tech Stack
 
-Backend: Node.js, Express.js
+- Backend: Node.js, Express.js
 
-Database: MongoDB
+- Database: MongoDB
 
-Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript
 
-API Testing: Postman
+- API Testing: Postman
 
 ## 🛠 Setup Instructions
 
