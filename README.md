@@ -4,7 +4,7 @@
 
 This is a URL Shortener API that allows users to generate short links, retrieve original URLs, update shortened links, delete links, and view statistics.
 
-🚀 **Features**
+## 🚀 Features
 
 1. Generate short URLs
 
@@ -16,7 +16,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 
 5. Fetch statistics for shortened URLs
 
-🔧 **Tech Stack**
+## 🔧 Tech Stack
 
 Backend: Node.js, Express.js
 
@@ -26,7 +26,7 @@ Frontend: HTML, CSS, JavaScript
 
 API Testing: Postman
 
-**🛠 Setup Instructions**
+## 🛠 Setup Instructions
 
 1️⃣ Clone the Repository
 
@@ -53,13 +53,12 @@ Server runs on `http://localhost:5001`
 
 4️⃣ API Endpoints
 
-## API Endpoints
 
 | Method  | Endpoint          | Description                      |
 |---------|------------------|----------------------------------|
 | **POST**   | `/shorten`         | Generate a short URL            |
-| **GET**    | `/shorten/:id`     | Retrieve the original URL       |
-| **PUT**    | `/shorten/:id`     | Update an existing short URL    |
-| **DELETE** | `/shorten/:id`     | Delete a short URL              |
-| **GET**    | `/shorten/:id/stats` | Get stats for a short URL      |
+| **GET**    | `/shorten/:shortId`     | Retrieve the original URL       |
+| **PUT**    | `/shorten/:shortId`     | Update an existing short URL    |
+| **DELETE** | `/shorten/:shortId`     | Delete a short URL              |
+| **GET**    | `/shorten/:shortId/stats` | Get stats for a short URL      |
 
