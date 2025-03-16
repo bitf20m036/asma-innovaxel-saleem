@@ -28,7 +28,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 
 ## 🛠 Setup Instructions
 
-1️⃣ Clone the Repository
+1️⃣ **Clone the Repository**
 
 
 `git clone https://github.com/{your-username}/{firstname}-innovaxel-{lastname}.git`
