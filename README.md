@@ -1,22 +1,22 @@
 # asma-innovaxel-saleem
 
-📌 **Project Overview**
+##📌 **Project Overview**
 
 This is a URL Shortener API that allows users to generate short links, retrieve original URLs, update shortened links, delete links, and view statistics.
 
-🚀 **Features**
+##🚀 **Features**
 
-Generate short URLs
+1. Generate short URLs
 
-Retrieve original URLs
+2. Retrieve original URLs
 
-Update existing short URLs
+3. Update existing short URLs
 
-Delete short URLs
+4. Delete short URLs
 
-Fetch statistics for shortened URLs
+5. Fetch statistics for shortened URLs
 
-🔧 **Tech Stack**
+##🔧 **Tech Stack**
 
 Backend: Node.js, Express.js
 
@@ -26,7 +26,7 @@ Frontend: HTML, CSS, JavaScript
 
 API Testing: Postman
 
-**🛠 Setup Instructions**
+##**🛠 Setup Instructions**
 
 1️⃣ Clone the Repository
 
@@ -35,14 +35,17 @@ API Testing: Postman
 2️⃣ Install Dependencies
 
 `cd {firstname}-innovaxel-{lastname}`
+
 `npm install`
 
 3️⃣ Start the Server
 
 `npm start`
-Server runs on http://localhost:5001
+
+Server runs on `http://localhost:5001`
 
 4️⃣ API Endpoints
+
 Method	Endpoint	Description
 POST	/shorten	Generate short URL
 GET	/shorten/:id	Retrieve original URL
