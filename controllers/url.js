@@ -59,6 +59,7 @@ async function handleGetShortUrl(req, res) {
         return res.status(500).json({ error: "Server error", details: error.message });
     }
 }
+
 async function handleUpdateShortUrl(req, res) {
     try {
         const { shortId } = req.params;
@@ -87,6 +88,7 @@ async function handleUpdateShortUrl(req, res) {
         return res.status(500).json({ error: "Server error", details: error.message });
     }
 }
+
 async function handleDeleteShortUrl(req, res) {
     try {
         const { shortId } = req.params;
@@ -102,9 +104,32 @@ async function handleDeleteShortUrl(req, res) {
     }
 }
 
+async function handleGetShortUrlStats(req, res) {
+    try {
+        const { shortId } = req.params;
+        const entry = await URL.findOne({ shortId });
+
+        if (!entry) {
+            return res.status(404).json({ error: "Short URL not found" });
+        }
+
+        return res.status(200).json({
+            id: entry._id,
+            url: entry.redirectURL,
+            shortCode: entry.shortId,
+            createdAt: entry.createdAt,
+            updatedAt: entry.updatedAt,
+            accessCount: entry.visitHistory ? entry.visitHistory.length : 0,
+        });
+    } catch (error) {
+        return res.status(500).json({ error: "Server error", details: error.message });
+    }
+}
+
 module.exports = {
     handleGenerateShortUrl,
-    handleGetShortUrl,
-    handleUpdateShortUrl,
     handleDeleteShortUrl,
+    handleUpdateShortUrl,
+    handleGetShortUrl,
+    handleGetShortUrlStats,
 };
