@@ -35,6 +35,33 @@ async function handleGenerateShortUrl(req, res) {
     }
 }
 
+async function handleGetShortUrl(req, res) {
+    try {
+        const { shortId } = req.params;
+        const entry = await URL.findOneAndUpdate(
+            { shortId },
+            { $push: { visitHistory: { timestamp: new Date() } } },
+            { new: true }
+        );
+
+        if (!entry || !entry.redirectURL) {
+            return res.status(404).json({ error: "Short URL not found" });
+        }
+
+        return res.status(200).json({
+            id: entry._id,
+            url: entry.redirectURL,
+            shortCode: entry.shortId,
+            createdAt: entry.createdAt,
+            updatedAt: entry.updatedAt
+        });
+    } catch (error) {
+        return res.status(500).json({ error: "Server error", details: error.message });
+    }
+}
+
+
 module.exports = {
     handleGenerateShortUrl,
+    handleGetShortUrl,
 };
