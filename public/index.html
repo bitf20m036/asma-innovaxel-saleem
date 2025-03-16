@@ -1,35 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>URL Shortener API Tester</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>URL Shortener API Tester</h1>
-        <label for="apiSelect">Choose an API</label>
-        <select id="apiSelect">
-            <option value="generate">Generate Short URL</option>
-            <option value="get">Get Original URL</option>
-            <option value="update">Update Short URL</option>
-            <option value="delete">Delete Short URL</option>
-            <option value="stats">Get URL Stats</option>
-        </select>
+      <h1>URL Shortener API Tester</h1>
+      <label for="apiSelect">Choose an API</label>
+      <select id="apiSelect">
+        <option value="generate">Generate Short URL</option>
+        <option value="get">Get Original URL</option>
+        <option value="update">Update Short URL</option>
+        <option value="delete">Delete Short URL</option>
+        <option value="stats">Get URL Stats</option>
+      </select>
 
-        <div id="inputContainer">
-            <input type="text" id="inputField" placeholder="Enter URL or Short ID">
-        </div>
+      <div id="inputContainer">
+        <input
+          type="text"
+          id="inputField"
+          placeholder="Enter URL or Short ID"
+        />
+      </div>
 
-        <button onclick="callApi()">Execute</button>
+      <button onclick="callApi()">Execute</button>
 
-        <div id="responseContainer">
-            <h3>Response:</h3>
-            <pre id="responseOutput"></pre>
-        </div>
+      <div id="responseContainer">
+        <h3>Response:</h3>
+        <pre id="responseOutput"></pre>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

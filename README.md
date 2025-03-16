@@ -30,35 +30,26 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 
 1️⃣ **Clone the Repository**
 
-
 `git clone https://github.com/{your-username}/{firstname}-innovaxel-{lastname}.git`
 
-
 2️⃣ **Install Dependencies**
-
 
 `cd {firstname}-innovaxel-{lastname}`
 
 `npm install`
 
-
 3️⃣ **Start the Server**
-
 
 `npm start`
 
-
 Server runs on `http://localhost:5001`
-
 
 4️⃣ **API Endpoints**
 
-
-| Method  | Endpoint          | Description                      |
-|---------|------------------|----------------------------------|
-| **POST**   | `/shorten`         | Generate a short URL            |
-| **GET**    | `/shorten/:shortId`     | Retrieve the original URL       |
-| **PUT**    | `/shorten/:shortId`     | Update an existing short URL    |
-| **DELETE** | `/shorten/:shortId`     | Delete a short URL              |
-| **GET**    | `/shorten/:shortId/stats` | Get stats for a short URL      |
-
+| Method     | Endpoint                  | Description                  |
+| ---------- | ------------------------- | ---------------------------- |
+| **POST**   | `/shorten`                | Generate a short URL         |
+| **GET**    | `/shorten/:shortId`       | Retrieve the original URL    |
+| **PUT**    | `/shorten/:shortId`       | Update an existing short URL |
+| **DELETE** | `/shorten/:shortId`       | Delete a short URL           |
+| **GET**    | `/shorten/:shortId/stats` | Get stats for a short URL    |
