@@ -87,10 +87,24 @@ async function handleUpdateShortUrl(req, res) {
         return res.status(500).json({ error: "Server error", details: error.message });
     }
 }
+async function handleDeleteShortUrl(req, res) {
+    try {
+        const { shortId } = req.params;
+        const deletedEntry = await URL.findOneAndDelete({ shortId });
 
+        if (!deletedEntry) {
+            return res.status(404).json({ error: "Short URL not found" });
+        }
+
+        return res.status(204).send();
+    } catch (error) {
+        return res.status(500).json({ error: "Server error", details: error.message });
+    }
+}
 
 module.exports = {
     handleGenerateShortUrl,
     handleGetShortUrl,
     handleUpdateShortUrl,
+    handleDeleteShortUrl,
 };
