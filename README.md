@@ -34,7 +34,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 `git clone https://github.com/{your-username}/{firstname}-innovaxel-{lastname}.git`
 
 
-2️⃣ Install Dependencies
+2️⃣ **Install Dependencies**
 
 
 `cd {firstname}-innovaxel-{lastname}`
@@ -42,7 +42,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 `npm install`
 
 
-3️⃣ Start the Server
+3️⃣ **Start the Server**
 
 
 `npm start`
@@ -51,7 +51,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 Server runs on `http://localhost:5001`
 
 
-4️⃣ API Endpoints
+4️⃣ **API Endpoints**
 
 
 | Method  | Endpoint          | Description                      |
