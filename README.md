@@ -5,6 +5,7 @@ This is a URL Shortener API that allows users to generate short links, retrieve 
 
 🚀 **Features**
 Generate short URLs
+
 Retrieve original URLs
 Update existing short URLs
 Delete short URLs
